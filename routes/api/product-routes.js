@@ -5,6 +5,10 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
 router.get('/', (req, res) => {
+  const productData = await models.Product.findAll({
+    include: [{ model: model.Category, model.Tag}]
+  });
+  res.json(productData);
   // find all products
   // be sure to include its associated Category and Tag data
 });
@@ -90,8 +94,13 @@ router.put('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
+// delete one product by its `id` value
+router.delete('/:id', async (req, res) => {
+  const productData = await models.Product.destroy({
+    where: {
+      id: req.params.id
+    }});
+    res.json(productData);
 });
 
 module.exports = router;
