@@ -4,34 +4,79 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // The `/api/products` endpoint
 
 // get all products
-router.get('/', (req, res) => {
-  const productData = await models.Product.findAll({
-    include: [{ model: model.Category, model.Tag}]
+// const productData = await models.Product.findAll({
+  //   include: [{ model: model.Category, model.Tag}]
+  // });
+  router.get('/', async (req, res) => {
+
+  const productData = await Product.findAll({
+  attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+  include: [
+    {
+      model: Category,
+      attributes: ['id', 'category_name']
+    },
+    {
+      model: Tag, 
+      attributes: ['id', 'tag_name']
+    }
+  ]
+})
+.then(productData => res.json(productData))
+.catch(err => {
+  console.log(err);
+    res.status(500).json(err);
   });
-  res.json(productData);
-  // find all products
-  // be sure to include its associated Category and Tag data
 });
 
+
 // get one product
-router.get('/:id', (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+// find a single product by its `id`, be sure to include its associated Category and Tag data
+router.get('/:id', async (req, res) => {
+  const productData = await Product.findOne({
+  where: {
+    id: req.params.id
+  },
+  attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+  include: [
+    {
+      model: Category,
+      attributes: ['id', 'category_name']
+    },
+    {
+      model: Tag, 
+      attributes: ['id', 'tag_name']
+    }
+  ]
+})
+.then(productData => {
+  if (!productData) { 
+    res.status(404).json({message: 'Product data not found by this id'});
+  return;
+}
+res.json(productData);
+})
+.catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
 });
 
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
-    {
-      product_name: "Basketball",
+  {
+    product_name: "Basketball",
       price: 200.00,
       stock: 3,
       // needs to be an array, even with once value to be able to map and .length below
       tagIds: [1, 2, 3, 4]
     }
   */
-  Product.create(req.body)
-    .then((product) => {
+
+
+ Product.create(req.body)
+ .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
