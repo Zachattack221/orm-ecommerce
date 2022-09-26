@@ -21,8 +21,11 @@ Once database is created, enter "npm run seed" within the terminal to seed the c
 Lastly, enter "npm run start" in the console. This will open a port at localhost:3001, accessible when 'localhost:3001' searched in browser, or when opened via Insomnia as demonstrated in the video link provided.
 
 ## Visuals
+Categories
 ![Categories](./Images/GetAllCategories.png)
+Products
 ![Products](./Images/GetAllProducts.png)
+Tags
 ![Tags](./Images/GetAllTags.png)
 
 ## License
