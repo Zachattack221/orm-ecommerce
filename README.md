@@ -7,8 +7,8 @@
 4. [License](#license)
 
 ## Description
-[Video Walkthrough]()
-[GitHub Repository]()
+[Video Walkthrough](https://drive.google.com/file/d/1ponnkLk59a53OkXTijNQUV9tyzGjjJTE/view)
+[GitHub Repository](https://github.com/Zachattack221/orm-ecommerce)
 
 
 ## Installation
@@ -21,8 +21,9 @@ Once database is created, enter "npm run seed" within the terminal to seed the c
 Lastly, enter "npm run start" in the console. This will open a port at localhost:3001, accessible when 'localhost:3001' searched in browser, or when opened via Insomnia as demonstrated in the video link provided.
 
 ## Visuals
-![]()
-![]()
+![Categories](./Images/GetAllCategories.png)
+![Products](./Images/GetAllProducts.png)
+![Tags](./Images/GetAllTags.png)
 
 ## License
 This application is licensed with the MIT License.
