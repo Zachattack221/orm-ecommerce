@@ -9,6 +9,10 @@
 ## Description
 [Video Walkthrough](https://drive.google.com/file/d/1ponnkLk59a53OkXTijNQUV9tyzGjjJTE/view)
 [GitHub Repository](https://github.com/Zachattack221/orm-ecommerce)
+This application serves to connect a user with a variety of products, stored in a mock database, and accessed via local routing. The functionality allows someone to create, search, update and delete products, as well as their associated categories and tags. 
+
+Included npm packages: dotenv, express, mysql2, and sequelize.
+
 
 
 ## Installation
