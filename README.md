@@ -11,6 +11,8 @@
 [GitHub Repository](https://github.com/Zachattack221/orm-ecommerce)
 This application serves to connect a user with a variety of products, stored in a mock database, and accessed via local routing. The functionality allows someone to create, search, update and delete products, as well as their associated categories and tags. 
 
+Demonstrative of the object-relational mapping method of data management. Useful in an e-commerce setting with a more defined set of data values and relationships (defined via api routing, and model based organization).
+
 Included npm packages: dotenv, express, mysql2, and sequelize.
 
 
