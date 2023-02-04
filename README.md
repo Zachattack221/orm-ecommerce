@@ -8,8 +8,11 @@
 
 ## Description
 [Video Walkthrough](https://drive.google.com/file/d/1ponnkLk59a53OkXTijNQUV9tyzGjjJTE/view)
+\
 [GitHub Repository](https://github.com/Zachattack221/orm-ecommerce)
-This application serves to connect a user with a variety of products, stored in a mock database, and accessed via local routing. The functionality allows someone to create, search, update and delete products, as well as their associated categories and tags. 
+\
+\
+This application serves to connect a user with a variety of products, stored in a mock database, and accessed via local routing. The functionality allows a user to create, search, update and delete products, as well as their associated categories and tags. 
 
 Demonstrative of the object-relational mapping method of data management. Useful in an e-commerce setting with a more defined set of data values and relationships (defined via api routing, and model based organization).
 
@@ -27,6 +30,9 @@ Once database is created, enter "npm run seed" within the terminal to seed the c
 Lastly, enter "npm run start" in the console. This will open a port at localhost:3001, accessible when 'localhost:3001' searched in browser, or when opened via Insomnia as demonstrated in the video link provided.
 
 ## Visuals
+Functionality and usage demonstrated via Insomnia based queries:
+\
+\
 Categories
 ![Categories](./Images/GetAllCategories.png)
 Products
