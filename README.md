@@ -2,9 +2,10 @@
 
 ## Table of Contents
 1. [Description](#description)
-2. [Installation](#installation)
-3. [Visuals](#visuals)
-4. [License](#license)
+2. [Technology](#technology) 
+3. [Installation](#installation)
+4. [Visuals](#visuals)
+5. [License](#license)
 
 ## Description
 [Video Walkthrough](https://drive.google.com/file/d/1ponnkLk59a53OkXTijNQUV9tyzGjjJTE/view)
@@ -16,7 +17,9 @@ This application serves to connect a user with a variety of products, stored in 
 
 Demonstrative of the object-relational mapping method of data management. Useful in an e-commerce setting with a more defined set of data values and relationships (defined via api routing, and model based organization).
 
-Included npm packages: dotenv, express, mysql2, and sequelize.
+## Technology
+<!-- TODO: finish tech use, link appropriate npm packages -->
+Utilizes various npm packages: dotenv, express, mysql2, and sequelize.
 
 
 
