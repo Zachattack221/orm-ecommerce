@@ -19,7 +19,14 @@ Demonstrative of the object-relational mapping method of data management. Useful
 
 ## Technology
 <!-- TODO: finish tech use, link appropriate npm packages -->
-Utilizes various npm packages: dotenv, express, mysql2, and sequelize.
+Utilizes various npm packages: 
+\
+[Dotenv](https://www.npmjs.com/package/dotenv) Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code. 
+\
+[Express](https://www.npmjs.com/package/express) as a web framework for node.js
+\
+[Mysql2](https://www.npmjs.com/package/mysql2) to
+[Sequelize]()
 
 
 
