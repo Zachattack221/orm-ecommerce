@@ -1,3 +1,4 @@
+// consolidates api routes to export all to be used via server.js
 const router = require('express').Router();
 const categoryRoutes = require('./category-routes');
 const productRoutes = require('./product-routes');

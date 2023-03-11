@@ -1,3 +1,4 @@
+// Isolates connection to SQL server, exported function used in server.js
 require('dotenv').config();
 
 const Sequelize = require('sequelize');

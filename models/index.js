@@ -4,6 +4,8 @@ const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
+// Defining the relationships between models
+
 // Products belongsTo Category
 Product.belongsTo(Category, {
 foreignKey: 'category_id',
@@ -28,6 +30,7 @@ Tag.belongsToMany(Product, {
   foreignKey: 'tag_id'
 });
 
+// Exported models for use in C.R.U.D. operation queries
 module.exports = {
   Product,
   Category,
